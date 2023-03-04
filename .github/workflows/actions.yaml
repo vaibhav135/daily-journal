@@ -1,0 +1,20 @@
+name: actions
+
+run-name: ${{ github.actor }} is running actions
+on: [push]
+
+jobs:
+  linting:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout runner 
+        uses: actions/checkout@v3
+
+      - name: install node on runner
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16.13.x
+          cache: npm
+      
+      - name: install and run linting
+        run: npm ci && npm run lint
