@@ -3,5 +3,5 @@ export default function RootPage() {
 		<div>
 			<h1> Hi this is a default root page. </h1>
 		</div>
-	)
+	);
 }
