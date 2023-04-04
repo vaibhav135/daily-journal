@@ -1,4 +1,4 @@
-import { string, object, addMethod } from 'yup';
+import { string, object, addMethod } from 'Yup';
 
 import { validationErrors } from '@utils/errors';
 
