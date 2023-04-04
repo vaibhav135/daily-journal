@@ -40,4 +40,6 @@ jspm_packages
 # Ignore .env's in config directory
 config/.env.*
 !config/.env.sample
-.env
+.env*.local
+.env*.development
+.env*.production
