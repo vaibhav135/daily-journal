@@ -1,6 +1,6 @@
 import { signIn } from 'next-auth/react';
 import { Form, Formik } from 'formik';
-import { InferType } from 'yup';
+import { InferType } from 'Yup';
 import { Button, Input as InputField } from '../../atoms';
 import { loginFormSchema } from './validations';
 
