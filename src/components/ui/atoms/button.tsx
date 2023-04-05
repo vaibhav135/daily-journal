@@ -1,5 +1,5 @@
 import { cva, type VariantProps } from "class-variance-authority";
-import {ComponentProps} from 'react';
+import {ComponentProps, FC} from 'react';
 
 export type ButtonProps =  ComponentProps<'button'> & VariantProps<typeof buttonStyles> & {
     text: string;
@@ -26,6 +26,6 @@ const buttonStyles = cva('button font-poppins rounded text-white flex flex-row j
     }
 });
 
-export const Button = ({intent, size,text = 'Button' , ...rest}: ButtonProps) => {
+export const Button: FC<ButtonProps> = ({intent, size,text = 'Button' , ...rest}) => {
     return <button className={buttonStyles({intent, size})} {...rest}>{text}</button>
 }
